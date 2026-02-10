@@ -75,12 +75,11 @@ const SAMPLES = [
     }
 ];
 
-// Initialize Dashboard
-// Initialize Dashboard
+// Set up initial state with samples
 async function initDashboard() {
     if (DashboardState.initialized) return;
 
-    // 1. Render immediately with Samples (Instant UI)
+    // Load samples for instant feedback
     DashboardState.knowledge = SAMPLES;
     DashboardState.stats = {
         totalNotes: 1,
@@ -91,7 +90,7 @@ async function initDashboard() {
     renderDashboard();
     DashboardState.initialized = true;
 
-    // 2. Fetch Live Data in Background
+    // Fetch background data
     try {
         const response = await window.api.getKnowledge();
         const userItems = (response && response.items) ? response.items.map(item => ({
@@ -142,7 +141,7 @@ function renderDashboard() {
         ${renderAddKnowledgeModal()}
     `;
 
-    // Inject the correct content after the shell is rendered
+    // Inject correct page content
     updatePageContent(DashboardState.activeNav);
 
     // Update sidebar active state

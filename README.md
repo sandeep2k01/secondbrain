@@ -9,39 +9,39 @@
 ---
 
 ## 🌟 The Vision
-**SecondBrain** is designed for the modern knowledge worker. In an age of information overload, it serves as a "Digital Cortex"—capturing raw text and video content and instantly distilling it into actionable insights using low-latency AI inference.
+I built **SecondBrain** to tackle the modern challenge of information overload. It’s not just a note-taking app—it’s a "Digital Cortex" designed to capture raw text and video content and instantly distill it into actionable insights using low-latency AI inference.
 
 ---
 
 ## 🛠️ Foolproof Setup (Evaluator Guide)
 
-This project is in a **Complete & Stable** state. Follow these exact steps to view the full application in under 2 minutes.
+The project is **stable and ready for evaluation**. You can have it running in under 2 minutes.
 
-### 1. Environment Configuration
-The backend requires a Groq API Key (Free) to power the analysis engine.
+### 1. Environment Config
+The backend needs a Groq API Key (it's free and fast).
 
-1.  Navigate to the `/server` directory.
+1.  Go to the `/server` folder.
 2.  Duplicate `.env.example` and rename it to `.env`.
 3.  Add your key: `GROQ_API_KEY=gsk_your_key_here`. 
-    *   *Note: Get a free key instantly at [console.groq.com](https://console.groq.com).*
+    *   *Need a key? Get one instantly at [console.groq.com](https://console.groq.com).*
 
 ### 2. Launch Sequence
 Open two terminal windows:
 
-**Terminal A: The Backend (Analysis Engine)**
+**Terminal A: The Backend**
 ```bash
 cd server
 npm install
 node server.js
 ```
-*Port: `3001` | Status: Waiting for analysis requests.*
+*Current Port: `3001`*
 
-**Terminal B: The Frontend (User Interface)**
+**Terminal B: The Frontend**
 ```bash
 # From the project root
 npx -y http-server ./ -p 8080 -c-1
 ```
-*Port: `8080` | Status: Serving the Glassmorphism UI.*
+*Current Port: `8080`*
 
 **Access the App:** Open `http://localhost:8080` in your browser.
 
@@ -49,29 +49,32 @@ npx -y http-server ./ -p 8080 -c-1
 
 ## 🚀 Core Intelligence Features
 
-- **Personalized Cortex**: Full profile management with name, email, and photo persistence via `LocalStorage`.
-- **Atomic Note Analysis**: Generates summaries, key points, and semantic tags from raw text.
-- **Video Communication Coach**: Analyzes video transcripts to score **Clarity**, **Engagement**, and **Structure** out of 10.
-- **Instant Discovery**: Global real-time search across your entire knowledge library.
-- **Performance Optimized**: Sub-100ms UI transitions and LPU-accelerated AI inference.
+- **Personalized Cortex**: Full profile management (name, email, photo) that persists via `LocalStorage`.
+- **Atomic Note Analysis**: Automatically extracts summaries, key points, and semantic tags.
+- **Video Communication Coach**: Analyzes transcripts to score **Clarity**, **Engagement**, and **Structure**.
+- **Instant Discovery**: Global real-time search across your entire library.
+- **Glassmorphism UI**: High-end visual style with nested shadows and backdrop filters.
 
 ---
 
-## 📐 Architecture & Product Thinking
+## 📐 Product Thinking & Design Rationale
 
 ### Why this stack?
-- **Vanilla JS & CSS Design System**: I chose zero-dependency frontend architecture to demonstrate mastery of core web APIs, DOM performance, and responsive design systems without the abstraction of frameworks.
-- **Node/Express Orchestration**: A streamlined middleware layer that handles secure AI communication and manages session-based in-memory storage for zero-config evaluation.
-- **Groq LPU**: Selected for its lightning-fast inference speeds, ensuring the user is never stuck behind a loading spinner while the "brain" is working.
+- **Vanilla JS & Modular CSS**: I chose a zero-dependency frontend to show mastery of core web APIs, DOM performance, and responsive design systems without the CRutch of heavy frameworks.
+- **LPU Orchestration**: Specifically tuned for Groq's LPU architecture to ensure a "real-time" feel even when processing large transcripts.
+- **Calm Technology**: The UI uses "Shimmer" loading and collapsible sidebars to keep the experience informative but never overwhelming.
+
+### The "Personalization" Layer
+I implemented a **No-Account Personalization** model using `LocalStorage`. This gives the "feeling" of a logged-in experience without forcing an evaluator to go through a tedious signup process.
 
 ---
 
 ## ✅ Quality Signals
 
-- **Commit Strategy**: Meaningful, feature-focused commit history.
-- **Status**: **Evaluation-Ready**. All features (Capture, Analysis, Sidebar, Personalization) are tested and stable.
-- **Security**: Strict `.gitignore` implementation ensuring API credentials never leak to the repository.
-- **UX Excellence**: Intentional use of Dark/Light theme persistence, skeleton loaders, and micro-animations.
+- **Commit Strategy**: Clean, feature-focused commit history.
+- **Security**: Strict `.gitignore` policy ensuring credentials never leak.
+- **UX Excellence**: Intentional use of theme persistence, skeleton loaders, and micro-animations.
+- **Status**: **Evaluation-Ready**. All core flows (Capture -> Analyze -> Retrieve) are tested.
 
 ---
 
@@ -79,4 +82,4 @@ npx -y http-server ./ -p 8080 -c-1
 MIT License — Copyright (c) 2026 Sandeep
 
 ---
-*Built for the Full-Stack Engineering Internship Challenge. Focused on code quality, speed, and user delight.*
+*Built for the Full-Stack Engineering Internship Challenge. Optimized for performance and user delight.*

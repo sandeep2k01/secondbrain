@@ -6,7 +6,7 @@ const Groq = require('groq-sdk');
 const app = express();
 const PORT = 3001;
 
-// Initialize Groq client
+// Init Groq
 const groq = new Groq({
     apiKey: process.env.GROQ_API_KEY
 });
@@ -29,14 +29,13 @@ app.get('/', (req, res) => {
     });
 });
 
-// Health check
+// Health
 app.get('/health', (req, res) => {
-    res.json({ status: 'ok', timestamp: new Date().toISOString() });
+    res.json({ status: 'ok', time: new Date().toISOString() });
 });
 
-// In-memory store - starts empty, users add their own content
+// Simple in-memory storage
 let knowledge = [];
-
 let idCounter = 1;
 
 // GET /api/knowledge - List all items
@@ -124,8 +123,7 @@ app.post('/api/knowledge/:id/analyze', async (req, res) => {
     item.status = 'processing';
 
     try {
-        // Call Groq AI for real analysis
-        console.log(`Analyzing: "${item.title}" with Groq AI...`);
+        console.log(`Analyzing: ${item.title}`);
         const insights = await generateAIInsights(item);
 
         item.status = 'analyzed';

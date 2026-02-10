@@ -1,12 +1,8 @@
-/**
- * SecondBrain API Client
- * Handles communication with the backend API
- */
-
+// API client for backend communication
 const API_BASE = 'http://localhost:3001/api';
 
 const api = {
-    // Fetch all knowledge items
+    // List knowledge items
     async getKnowledge(options = {}) {
         const params = new URLSearchParams();
         if (options.type) params.set('type', options.type);
