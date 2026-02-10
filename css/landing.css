@@ -255,16 +255,63 @@
     border-radius: 50%;
     z-index: 0;
     pointer-events: none;
-    animation: drift 20s infinite alternate ease-in-out;
+    animation: drift 15s infinite alternate ease-in-out;
 }
 
 @keyframes drift {
     0% {
-        transform: translate(0, 0) rotate(0deg);
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    33% {
+        transform: translate(100px, 40px) rotate(10deg) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-30px, 80px) rotate(-10deg) scale(0.9);
     }
 
     100% {
-        transform: translate(50px, 30px) rotate(15deg);
+        transform: translate(60px, -20px) rotate(5deg) scale(1.05);
+    }
+}
+
+.hero-visual {
+    display: block;
+    position: relative;
+    z-index: 1;
+    min-height: 500px;
+    height: 100%;
+    width: 100%;
+    background-image: url('../assets/images/BG-IMG.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: float-hero 6s ease-in-out infinite, fade-in-hero 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes float-hero {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(2deg);
+    }
+}
+
+@keyframes fade-in-hero {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -411,32 +458,7 @@
     background: var(--border-color);
 }
 
-/* Hero Visual (Dashboard Preview) */
-.hero-visual {
-    display: block;
-    position: relative;
-    z-index: 1;
-    min-height: 500px;
-    height: 100%;
-    width: 100%;
-    background-image: url('../assets/images/BG-IMG.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    animation: float 5s ease-in-out infinite;
-}
 
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(-15px) rotate(1deg);
-    }
-}
 
 
 

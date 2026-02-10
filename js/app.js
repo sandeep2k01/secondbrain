@@ -24,7 +24,30 @@ document.addEventListener('DOMContentLoaded', () => {
     initThemeToggle();
     initNavbarScroll();
     initKeyboardShortcuts();
+    initHeroParallax();
 });
+
+// Hero Parallax Effect
+function initHeroParallax() {
+    const hero = document.querySelector('.hero');
+    const wrapper = document.querySelector('.hero-visual-wrapper');
+    if (!hero || !wrapper) return;
+
+    hero.addEventListener('mousemove', (e) => {
+        const { clientX, clientY } = e;
+        const { innerWidth, innerHeight } = window;
+
+        // Calculate move offsets
+        const moveX = (clientX - innerWidth / 2) / 50;
+        const moveY = (clientY - innerHeight / 2) / 50;
+
+        wrapper.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    });
+
+    hero.addEventListener('mouseleave', () => {
+        wrapper.style.transform = 'translate(0, 0)';
+    });
+}
 
 // Theme Management
 function initTheme() {
