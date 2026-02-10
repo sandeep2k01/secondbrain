@@ -35,14 +35,10 @@
     0%,
     100% {
         transform: translateY(0) rotate(0deg) scale(1.35);
-        filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.3));
-        /* Soft Indigo Glow */
     }
 
     50% {
         transform: translateY(-20px) rotate(2deg) scale(1.4);
-        filter: drop-shadow(0 0 40px rgba(168, 85, 247, 0.5));
-        /* Intense Purple Glow */
     }
 }
 
@@ -55,40 +51,5 @@
     to {
         opacity: 1;
         transform: scale(1.35);
-    }
-}
-
-/* Shine Effect Overlay */
-.hero-visual::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right,
-            transparent 0%,
-            rgba(255, 255, 255, 0.3) 50%,
-            transparent 100%);
-    transform: skewX(-25deg);
-    animation: shine 4s infinite ease-in-out;
-    pointer-events: none;
-}
-
-@keyframes shine {
-
-    0%,
-    80% {
-        left: -100%;
-        opacity: 0;
-    }
-
-    85% {
-        opacity: 0.5;
-    }
-
-    100% {
-        left: 200%;
-        opacity: 0;
     }
 }
