@@ -28,14 +28,16 @@
 }
 
 @keyframes float-hero {
-
-    0%,
-    100% {
+    0% {
         transform: translateY(0) rotate(0deg);
     }
 
     50% {
         transform: translateY(-25px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
     }
 }
 
