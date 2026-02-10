@@ -6,6 +6,10 @@
 ![Tech Stack](https://img.shields.io/badge/Stack-Vanilla_JS_|_Node_|_Groq-blue?style=for-the-badge)
 ![AI Model](https://img.shields.io/badge/AI-LLaMA_3.1_(Groq)-6366f1?style=for-the-badge)
 
+<br />
+
+### [👉 Try the Live Demo](https://secondbrain96.vercel.app/)
+
 ---
 
 ## 🌟 The Vision
