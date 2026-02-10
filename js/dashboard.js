@@ -608,17 +608,17 @@ function renderAddKnowledgeModal() {
                     <form id="add-knowledge-form" style="margin-top: var(--spacing-6);">
                         <div class="input-group">
                             <label class="input-label" for="knowledge-title">Title</label>
-                            <input type="text" class="input" id="knowledge-title" placeholder="e.g., GraphQL Security Patterns" required>
+                            <input type="text" class="input" id="knowledge-title" placeholder="e.g., Ideas for my next project 🚀" required>
                         </div>
                         
                         <div id="text-content-field" class="input-group">
                             <label class="input-label" for="knowledge-content">Content</label>
-                            <textarea class="textarea" id="knowledge-content" placeholder="Paste your text content, notes, or article here... AI will analyze it for you." rows="6"></textarea>
+                            <textarea class="textarea" id="knowledge-content" placeholder="Paste your messy thoughts, a rough draft, or an article here. The AI will structure it for you..." rows="6"></textarea>
                         </div>
                         
                         <div id="video-content-field" class="input-group" style="display: none;">
                             <label class="input-label" for="knowledge-video-url">Video URL</label>
-                            <input type="url" class="input" id="knowledge-video-url" placeholder="Paste YouTube link here...">
+                            <input type="url" class="input" id="knowledge-video-url" placeholder="Paste a YouTube link (e.g., a tutorial or talk)...">
                             <p style="font-size:12px;color:var(--text-tertiary);margin-top:var(--spacing-2);">AI will generate a summary and key insights from the video.</p>
                         </div>
                     </form>
