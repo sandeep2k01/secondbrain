@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Build Your Second Brain - An AI-Powered Knowledge System for capturing, analyzing, and retrieving knowledge from text and video content.">
+    <title>Second Brain | AI-Powered Knowledge System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Permanent Cache Busting -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link rel="stylesheet" href="css/variables.css?v=1.0.2">
+    <link rel="stylesheet" href="css/base.css?v=1.0.2">
+    <link rel="stylesheet" href="css/components.css?v=1.0.2">
+    <link rel="stylesheet" href="css/landing.css?v=1.0.2">
+    <link rel="stylesheet" href="css/dashboard.css?v=1.0.2">
+    <link rel="stylesheet" href="css/animations.css?v=1.0.2">
+</head>
+
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="page active">
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="#" class="nav-logo">
+                    <div class="logo-icon">
+                        <img src="assets/images/logo-cropped.png" alt="SecondBrain Logo">
+                    </div>
+                </a>
+                <div class="nav-links">
+                    <!-- Mobile Sidebar Header -->
+                    <div class="mobile-sidebar-header">
+                        <a href="#" class="nav-logo">
+                            <div class="logo-icon">
+                                <img src="assets/images/logo-cropped.png" alt="SecondBrain Logo">
+                            </div>
+                        </a>
+                    </div>
+                    <a href="#features" onclick="closeMobileMenu()">Features</a>
+                    <a href="#how-it-works" onclick="closeMobileMenu()">How It Works</a>
+                    <a href="#cta" onclick="closeMobileMenu()">Try It</a>
+                    <button class="btn btn-primary mobile-cta" onclick="showPage('dashboard')">Get Started</button>
+                </div>
+                <div class="nav-overlay" id="nav-overlay" onclick="toggleMobileMenu()"></div>
+                <div class="nav-actions">
+                    <button class="btn btn-primary" onclick="showPage('dashboard')">Get Started</button>
+                    <div class="nav-divider"></div>
+                    <button class="btn btn-ghost" id="theme-toggle">
+                        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <path
+                                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                        </svg>
+                        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                    </button>
+                </div>
+                <button class="mobile-menu-btn" id="mobile-menu-toggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg">
+                <div class="gradient-orb orb-1"></div>
+                <div class="gradient-orb orb-2"></div>
+                <div class="gradient-orb orb-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        AI-Powered Knowledge Management
+                    </div>
+                    <h1 class="hero-title">
+                        Build Your <span class="gradient-text">Second Brain</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Capture, analyze, and retrieve knowledge from text and video content.
+                        Your calm, intelligent personal knowledge assistant.
+                    </p>
+                    <div class="hero-ctas">
+                        <button class="btn btn-primary btn-lg" onclick="showPage('dashboard')">
+                            <span>Get Started Free</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                        <button class="btn btn-secondary btn-lg" onclick="showDemo()">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" />
+                            </svg>
+                            <span>View Demo</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="hero-visual">
+                    <div class="dashboard-preview">
+                        <div class="preview-header">
+                            <div class="preview-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <div class="preview-content">
+                            <div class="preview-sidebar"></div>
+                            <div class="preview-main">
+                                <div class="preview-card shimmer"></div>
+                                <div class="preview-card shimmer"></div>
+                                <div class="preview-card shimmer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header">
+
+                    <h2>Everything you need to build your knowledge system</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" style="--accent: var(--color-primary)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                                <line x1="16" y1="13" x2="8" y2="13" />
+                                <line x1="16" y1="17" x2="8" y2="17" />
+                            </svg>
+                        </div>
+                        <h3>Text Knowledge Capture</h3>
+                        <p>Add written notes, articles, and documents. AI extracts key insights automatically.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="--accent: var(--color-accent)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polygon points="10 8 16 12 10 16 10 8" />
+                            </svg>
+                        </div>
+                        <h3>Video Analysis</h3>
+                        <p>Upload videos and receive AI-generated summaries, transcripts, and communication feedback.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="--accent: var(--color-success)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z" />
+                                <path d="M19 3v4" />
+                                <path d="M21 5h-4" />
+                            </svg>
+                        </div>
+                        <h3>AI Insights</h3>
+                        <p>Get structured summaries, key points, and actionable insights from all your content.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="--accent: var(--color-warning)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                            </svg>
+                        </div>
+                        <h3>Smart Search</h3>
+                        <p>Instantly find any piece of knowledge with AI-powered semantic search.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="--accent: var(--color-primary-light)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                                <polyline points="2 17 12 22 22 17" />
+                                <polyline points="2 12 12 17 22 12" />
+                            </svg>
+                        </div>
+                        <h3>Organized Library</h3>
+                        <p>All your knowledge organized by type, date, and AI-generated categories.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="--accent: var(--color-accent-secondary)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                            </svg>
+                        </div>
+                        <h3>Real-Time Processing</h3>
+                        <p>Add notes or videos and get AI-powered insights, summaries, and tags generated instantly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <div class="section-header">
+
+                    <h2>Three simple steps to build your knowledge system</h2>
+                </div>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                        </div>
+                        <h3>Capture</h3>
+                        <p>Add text notes, paste articles, or upload video content to your knowledge base.</p>
+                    </div>
+                    <div class="step-connector">
+                        <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+                            <path d="M0 10 L100 10" stroke="currentColor" stroke-width="2" stroke-dasharray="5,5" />
+                        </svg>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                            </svg>
+                        </div>
+                        <h3>Analyze</h3>
+                        <p>AI processes your content, extracting summaries, key points, and insights.</p>
+                    </div>
+                    <div class="step-connector">
+                        <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+                            <path d="M0 10 L100 10" stroke="currentColor" stroke-width="2" stroke-dasharray="5,5" />
+                        </svg>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                            </svg>
+                        </div>
+                        <h3>Retrieve</h3>
+                        <p>Find any piece of knowledge instantly with intelligent search and filters.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" id="cta">
+            <div class="container">
+                <div class="cta-card">
+                    <div class="cta-content">
+                        <h2>Ready to build your Second Brain?</h2>
+                        <p>Join thousands of developers, students, and professionals who trust SecondBrain for their
+                            knowledge management.</p>
+                        <button class="btn btn-primary btn-lg" onclick="showPage('dashboard')">
+                            Start Building Now
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="nav-logo">
+                            <div class="logo-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                    <path d="M2 17l10 5 10-5" />
+                                    <path d="M2 12l10 5 10-5" />
+                                </svg>
+                            </div>
+                            <span>SecondBrain</span>
+                        </div>
+                        <p>Your AI-powered knowledge assistant</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Product</h4>
+                            <a href="#">Features</a>
+                            <a href="#">Pricing</a>
+                            <a href="#">API</a>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Company</h4>
+                            <a href="#">About</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Careers</a>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Legal</h4>
+                            <a href="#">Privacy</a>
+                            <a href="#">Terms</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 SecondBrain. All rights reserved. Developed by Sandeep Damera.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboard-page" class="page">
+        <!-- Content will be loaded by dashboard.js -->
+    </div>
+
+    <!-- Knowledge Detail Page -->
+    <div id="knowledge-detail-page" class="page">
+        <!-- Content will be loaded dynamically -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js?v=1.0.2"></script>
+    <script src="js/api.js?v=1.0.2"></script>
+    <script src="js/dashboard.js?v=1.0.2"></script>
+    <script src="js/knowledge.js?v=1.0.2"></script>
+</body>
+
+</html>

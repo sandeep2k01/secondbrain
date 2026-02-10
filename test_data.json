@@ -1,0 +1,5 @@
+{
+    "type": "text",
+    "title": "GraphQL Best Practices",
+    "content": "GraphQL is a query language for APIs. Key practices include designing schema first, using DataLoader for batching, implementing proper error handling, adding caching layers, and versioning your API carefully."
+}
